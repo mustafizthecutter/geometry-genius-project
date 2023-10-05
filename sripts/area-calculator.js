@@ -25,3 +25,20 @@ function getRectangleValueById() {
     const rectangleArea = document.getElementById('rectangle-area');
     rectangleArea.innerText = area;
 }
+
+function getParallelogramValueById() {
+    const base = getInputValue('parallelogram-base');
+    const height = getInputValue('parallelogram-height');
+    const area = base * height;
+    setTextElement('parallelogram-area', area)
+}
+function getInputValue(fieldId) {
+    const fieldIdValue = document.getElementById(fieldId);
+    const fieldIdValueString = fieldIdValue.value;
+    const field = parseFloat(fieldIdValueString);
+    return field;
+}
+function setTextElement(elementId, area) {
+    const setText = document.getElementById(elementId);
+    setText.innerText = area;
+}
