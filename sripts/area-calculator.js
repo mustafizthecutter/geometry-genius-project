@@ -32,6 +32,13 @@ function getParallelogramValueById() {
     const area = base * height;
     setTextElement('parallelogram-area', area)
 }
+function getEllipseValueById() {
+    const majorRadius = getInputValue('ellipse-major-radius');
+    const minorRadius = getInputValue('ellipse-minor-radius');
+    const area = Math.PI * majorRadius * minorRadius;
+    const areaTwoDecimals = area.toFixed(2);
+    setTextElement('ellipse-area', areaTwoDecimals);
+}
 function getInputValue(fieldId) {
     const fieldIdValue = document.getElementById(fieldId);
     const fieldIdValueString = fieldIdValue.value;
